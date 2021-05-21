@@ -13,9 +13,10 @@ def main():
         # ask user for web site test with http://www.gutenberg.org/files/98/98-0.txt
         print("where should we search? type 'q' to quit ")
         url = input()  # get URL
-        if url.lower() == 'q':
+        if url.lower() == 'q':  # if user enters 'q' break out of loop
             break
 
+        # ask user for the workds to search for
         print(f"Great! So we'll try to open this url {str(url)}\n")
         print("Enter the words to search for with a space in between (in any order): ")
         searchfor = input()
@@ -36,6 +37,7 @@ def main():
             if each == len(mylist):
                 lines += 1
 
+        # display results
         print(f"total number of lines with all words is {lines}")
 
 main()
